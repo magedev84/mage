@@ -41,7 +41,7 @@ public:
     MString& operator=(const MWCHAR* inStr) 
     {
         Copy(inStr);
-        return *this;  
+        return *this;
     }
 
     MString& operator=(const MString& inOther)
