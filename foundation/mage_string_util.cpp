@@ -99,6 +99,7 @@ std::array<MCHAR_SET_ID, (int)EMCharset::Max> MStringUtil::CharSetIDList =
 
 EMError MStringUtil::Convert(MMemory& outDest, EMCharset inDestCharset, const void* inSrc, EMCharset inSrcCharset)
 {
+	/*
 	assert(nullptr != inSrc);
 
 	MCHAR_SET_ID srcID = GetIDByCharset(inSrcCharset);
@@ -189,7 +190,11 @@ EMError MStringUtil::Convert(MMemory& outDest, EMCharset inDestCharset, const vo
 	}
 
 	iconv_close(handle);
+
 	return error;
+	 */
+
+	return EMError::None;
 }
 
 
