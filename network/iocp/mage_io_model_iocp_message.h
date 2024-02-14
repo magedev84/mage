@@ -4,6 +4,8 @@
 #include "mage_network.h"
 #include "mage_io_model_event.h"
 
+#if (MPLATFORM == MPLATFORM_WINDOWS)
+
 //-----------------------------------------------------------
 // IOCP에서 처리하는 메시지 타입
 //-----------------------------------------------------------
@@ -148,3 +150,6 @@ public:
 	WSABUF WSABuffer;
 	MBYTE Buffer[1024] = { 0, };
 };
+
+
+#endif

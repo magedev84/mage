@@ -1,4 +1,4 @@
-﻿#include "mage_astar.h"
+#include "mage_astar.h"
 #include "mage_trace.h"
 #include "mage_collision.h"
 
@@ -184,7 +184,7 @@ namespace MAstar
         }
 
         // 리스트를 돌면서 중앙 지점을 구한다
-        const int32 count = index2DList.size();
+        const MINT32 count = index2DList.size();
         std::vector<MVector2> positionList;
         positionList.resize(count);
 
@@ -406,13 +406,13 @@ namespace MAstar
         MINT32 startX = startIndex2D.X;
         MINT32 endX = endIndex2D.X;
         if (endX < startX) {
-            Swap(startX, endX);
+            std::swap(startX, endX);
         }
 
         MINT32 startY = startIndex2D.Y;
         MINT32 endY = endIndex2D.Y;
         if (endY < startY) {
-            Swap(startY, endY);
+            std::swap(startY, endY);
         }
 
         for (MINT32 x = startX; x <= endX; ++x)

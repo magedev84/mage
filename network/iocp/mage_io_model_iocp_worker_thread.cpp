@@ -1,7 +1,9 @@
+
 #include "mage_io_model_iocp_worker_thread.h"
 #include "mage_io_model_iocp_message.h"
 #include "mage_io_model_iocp.h"
 
+#if (MPLATFORM == MPLATFORM_WINDOWS)
 
 MIOModelIOCPWorkerThread::MIOModelIOCPWorkerThread(class MIOModelIOCP* inOwner)
 : Owner(inOwner)
@@ -124,3 +126,6 @@ void MIOModelIOCPWorkerThread::ProcessCompletionRecvMessage(struct MIOCPCompleti
 		socket->PushRecvPacket(inMessage->Buffer, inSize);
 	}
 }
+
+
+#endif

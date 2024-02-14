@@ -21,6 +21,7 @@ static char THIS_FILE[] = __FILE__;
 
 */
 
+#if (MPLATFORM == MPLATFORM_WINDOWS)
 
 EMError MIOModelIOCP::Start(MIOModelEventListener* inListener)
 {
@@ -387,3 +388,6 @@ void MIOModelIOCP::ProcessEvent()
 		}
 	}
 }
+
+
+#endif

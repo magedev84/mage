@@ -1,6 +1,7 @@
 #include "mage_io_model_iocp_socket.h"
 #include "mage_io_model_util.h"
 
+#if (MPLATFORM == MPLATFORM_WINDOWS)
 
 MIOCPSocket::MIOCPSocket(MINDEX inIndex)
 	: MSocket(inIndex)
@@ -136,3 +137,5 @@ void MIOCPSocket::Update()
 		Recv();
 	}
 }
+
+#endif

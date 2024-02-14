@@ -1,11 +1,15 @@
 #pragma once
 
+
+
 #include "mage_network.h"
 #include <thread>
 #include <mutex>
 
 #include "mage_buffer.h"
 #include "mage_memory.h"
+
+#if (MPLATFORM == MPLATFORM_WINDOWS)
 
 
 //-------------------------------------------------------------
@@ -49,3 +53,6 @@ protected:
 	MBuffer TempBuffer;
 	MMemory TempMemory;
 };
+
+
+#endif

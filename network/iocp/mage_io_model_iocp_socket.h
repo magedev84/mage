@@ -7,7 +7,7 @@
 #include <atomic>
 #include <mutex>
 
-
+#if (MPLATFORM == MPLATFORM_WINDOWS)
 
 //-------------------------------------------------------------
 // IOCP 소켓정보
@@ -96,3 +96,5 @@ protected:
 	MIOCPCompletionSendMessage CompletionSendMessage;
 };
 
+
+#endif

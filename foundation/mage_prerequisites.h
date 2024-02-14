@@ -1,4 +1,4 @@
-﻿#pragma once 
+#pragma once 
 
 // 플랫폼
 #define MPLATFORM_WINDOWS   1       // Windows
@@ -86,4 +86,4 @@
 		delete ITEM;				\
 		STACK.pop();				\
 	}								\
-}									\
+}									

@@ -5,6 +5,7 @@
 #include "mage_io_model_iocp_socket.h"
 #include "mage_pool.h"
 
+#if (MPLATFORM == MPLATFORM_WINDOWS)
 
 struct MIOModelIOCPConfig : public MIOModelConfig
 {
@@ -110,3 +111,6 @@ public:
 	// 세팅 정보
 	MIOModelIOCPConfig Config;
 };
+
+
+#endif
